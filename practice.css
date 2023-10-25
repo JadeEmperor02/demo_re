@@ -1,0 +1,199 @@
+:root{
+	--overlay-color:#03a9f4;
+}
+.showcase video{
+	position: absolute;
+	top: 0;
+	left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+ *{
+ 	box-sizing: border-box; 
+ 	margin: 0;
+ 	padding: 0;
+ }
+.showcase{
+	position: absolute;
+	right: 0;
+	width: 100%;
+	min-height: 100vh;
+	padding: 100px;
+	display: flex;
+	justify-content: space-between;	
+	align-items: center;
+	background: #111;
+	color: #fff;
+	z-index: 2;
+	transition: 0.5s;
+}
+.showcase.active{
+	right: 300px;
+}
+.logo{
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.showcase header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 40px 100px;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+}
+
+.toggle{
+	position: relative;
+	width: 60px;
+	height: 60px;
+	background: url(./images/bars-solid.svg);
+	background-size: 25px;
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	color: white;
+
+}
+.toggle.active{	
+	background: url(./images/Xmark-solid.svg);
+	background-size: 25px;
+	background-position: center;
+	background-repeat: no-repeat;
+
+
+
+}
+.overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(70deg,magenta 20%, blue 80%);
+    mix-blend-mode: overlay;
+}
+.text{
+	position: relative;
+	z-index: 10;
+}
+ .text h2{
+ 	font-size: 5em;
+ 	font-weight: 800;
+ 	line-height: 1em;
+ 	text-transform: uppercase;
+ 	animation-name: example;
+ 	animation-duration: 4s;
+ 	animation-iteration-count: infinite;
+ 	animation-timing-function: ease-in-out;
+
+
+ }
+ @keyframes example{
+ 	0%{color: white }
+ 	25%{color: gold}
+ 	50%{color: violet}
+ 	75%{color: magenta}
+ 	100%{color: crimson}
+
+ }
+ .text h3{
+ 	font-size: 4em;
+ 	font-weight: 700;
+ 	line-height: 1em;
+ 	text-transform: uppercase;
+
+ }
+ .text p{
+ 	font-size: 1.1em;
+ 	margin: 20px 0;
+ 	font-weight: 400;
+ 	max-width: 700px;
+ }
+ .text a{
+ 	display: inline-block;
+ 	font-size: 1em;
+ 	background: #fff;
+ 	padding: 10px 30px;
+ 	margin-top: 10px;
+ 	text-decoration:none;
+ 	color: #111;
+ 	text-transform: uppercase;
+ 	letter-spacing: 2px;
+ 	transition: 0.5s;
+ 	border-radius: 3px;
+
+ }
+ .text a:hover{
+ 	letter-spacing: 6px;
+ 	color: gold;
+ 	background: transparent;
+ 	border: 2px solid blue;
+ }
+
+.social li img{
+	width: 25;
+	height: 25px;
+}
+.social {
+	position: absolute;
+	bottom: 20px;
+	z-index: 10;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.social li{
+	list-style: none;
+}
+.social li a{
+	display: inline-block;
+	filter: invert(1);
+	margin-right: 20px;
+	transform: scale(0.5);
+	transition: 0.5s;	
+}
+.social li a:hover {
+		transform: rotate(20deg) translateY(-15px);
+}
+.menu{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 300px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(145deg, indigo 20%,red 80%)
+}
+.menu ul{
+	position: relative;
+	list-style: none;
+
+}
+.menu li a{
+	text-decoration: none;
+	font-size: 24px;
+	color: #111;
+}
+.menu li a:hover{
+	color: var(--overlay-color);
+}
+@media (max-width: 798px) {
+	.showcase, .showcase header{
+		padding: 40px;
+
+	}
+	.text h2{
+		font-size: 3em;
+	}
+	.text h3{
+		font-size: 2em;
+	}
